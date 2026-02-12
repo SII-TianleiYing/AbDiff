@@ -5,8 +5,6 @@ A novel latent diffusion–based framework for antibody conformational generatio
 
 This is a professional installation version, which is highly beneficial for researchers to fine-tune it for their own studies.
 
-We plan to further organize and upload a more user-friendly image version later. Stay tuned for future updates to this project!
-
 ### Installation
 
 Because it involves multiple modules, AbDiff requires several independent conda environments to run. All Python dependencies are specified in ./environmets. We recommend using conda environment, to install dependencies, run:
