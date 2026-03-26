@@ -1,44 +1,94 @@
-# AbDiff
-A novel latent diffusion–based framework for antibody conformational generation.
+## AbDiff
 
-## Installation for Developers
+AbDiff is an end-to-end antibody conformation generation pipeline based on diffusion models, orchestrating multiple external toolchains (ColabFold/AF2, IgFold, AbFold, AbDiff diffusion).
 
-This is a professional installation version, which is highly beneficial for researchers to fine-tune it for their own studies.
+This repository is designed to be run **from the AbDiff repo root**, where `abdiff/`, `scripts/`, `environments/`, `checkpoints/`, etc. are sibling directories.
 
-### Installation
+If you prefer Chinese documentation, see `README.zh-CN.md`.
 
-Because it involves multiple modules, AbDiff requires several independent conda environments to run. All Python dependencies are specified in ./environmets. We recommend using conda environment, to install dependencies, run:
+## Repository layout (important)
 
-```python
-$ conda env create -f ./environmets/abdiff_environment
-$ conda env create -f ./environmets/abfold_environment
-$ conda env create -f ./environmets/colabfold_environment
-$ conda env create -f ./environmets/igfold_environment
+Run everything from the repository root:
+
+```bash
+cd AbDiff
 ```
 
-Next, we will configure AbFold in an engineering-oriented manner:
+Key directories:
+- `scripts/`: orchestration scripts (preparation + full pipeline)
+- `environments/`: conda environment definitions (4 environments)
+- `checkpoints/`: model weights and diffusion checkpoints
+- `examples/`: example input and expected output structure
+- `docs/`: internal pipeline notes
 
-```python
-$ conda activate abfold
-$ pip install -e ./abfold
+## Environments (4 conda envs)
+
+Environment lock files live in `environments/` (`@EXPLICIT` format):
+- `environments/abdiff_colabfold.txt` → env name `abdiff_colabfold`
+- `environments/abdiff_igfold.txt` → env name `abdiff_igfold`
+- `environments/abdiff_abfold.txt` → env name `abdiff_abfold`
+- `environments/abdiff_diffusion.txt` → env name `abdiff_diffusion`
+
+## Preparation (create envs + download weights)
+
+You only need to fill in the URLs via environment variables:
+
+```bash
+export ABFOLD_CKPT_URL="__FILL_ME__"      # single checkpoint file
+export ABDIFF_CKPT_URL="__FILL_ME__"      # diffusion checkpoint archive (.tar/.tar.gz/.tgz/.zip)
+bash scripts/preparation.sh
 ```
 
-This will install AbFold into your conda environment in development mode. Please check to ensure that AbFold has been installed correctly.
+What `scripts/preparation.sh` does:
+- pre-check (validator only)
+- create the 4 conda environments if missing
+- download:
+  - AbFold checkpoint → `checkpoints/abfold/checkpoint_ema`
+  - AbDiff diffusion archive → extracted into `checkpoints/abdiff/20250103_1_a_1/`
+- post-check (stricter validation)
 
-Next, run the following code to check whether the weight files exist. If not, the weights will be downloaded automatically when an internet connection is available:
+## Run the example
 
-```python
-$ python check.py
+```bash
+bash scripts/example.sh
 ```
 
-### Test
+By default it uses:
+- `examples/example_input/test.csv`
+- `examples/example_input/fasta_dir/`
+and writes everything under:
+- `examples/example_output/run_full_pipeline_out/`
 
-We provide example inputs and outputs in `./example`.
+## Run your own data (full pipeline)
 
-After confirming that all four environments above have been fully installed, run:
+The pipeline interface is **path-based**:
+- `--input_csv`: input CSV for ColabFold
+- `--fasta_dir`: directory containing paired `.fasta` files
 
-```python
-$ python pipeline.py
+```bash
+bash scripts/run_full_pipeline.sh \
+  --input_csv /path/to/input.csv \
+  --fasta_dir /path/to/fasta_dir \
+  --output_root ./output
 ```
 
-Please note that when ColabFold is used for the first time, it will automatically download configuration files and requires template files to be available locally on your computer. If you do not need high-accuracy modeling, you can disable templates. For details, please refer to the official ColabFold documentation.
+Optional:
+- `--abfold_ckpt`: override AbFold checkpoint path (default `checkpoints/abfold/checkpoint_ema`)
+
+## Output layout (under output_root)
+
+All intermediate and final artifacts are written under `output_root/`:
+- `AF2_repr_raw/` (raw colabfold `.npy`)
+- `AF2_repr/` (merged `.pkl`)
+- `igfold_embedding/` (`.pt`)
+- `abfold_embedding/` (`*_pred.pt`)
+- `cdr_mask_H3/` (`.pt`)
+- `gen_abdiff_embeddings/` (sampled embedding `.pt`)
+- `gen_structures/` (final `.pdb`)
+
+## Internal pipeline notes
+
+See:
+- Chinese: `docs/pipeline.md`
+- English: `docs/pipeline.en.md`
+

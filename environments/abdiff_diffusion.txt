@@ -1,0 +1,49 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+# created-by: conda 24.11.3
+@EXPLICIT
+https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-main.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2024.12.31-h06a4308_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/ld_impl_linux-64-2.40-h12ee557_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/libgfortran4-7.5.0-ha8ba4b0_17.conda
+https://repo.anaconda.com/pkgs/main/linux-64/libstdcxx-ng-11.2.0-h1234567_1.conda
+https://conda.anaconda.org/pytorch/noarch/pytorch-mutex-1.0-cuda.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/libgfortran-ng-7.5.0-ha8ba4b0_17.conda
+https://repo.anaconda.com/pkgs/main/linux-64/libgomp-11.2.0-h1234567_1.conda
+https://repo.anaconda.com/pkgs/main/linux-64/_openmp_mutex-5.1-1_gnu.conda
+https://repo.anaconda.com/pkgs/main/linux-64/libgcc-ng-11.2.0-h1234567_1.conda
+https://conda.anaconda.org/conda-forge/linux-64/cudatoolkit-11.6.0-hecad31d_10.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/libabseil-20240116.2-cxx17_h6a678d5_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/libffi-3.4.4-h6a678d5_1.conda
+https://repo.anaconda.com/pkgs/main/linux-64/ncurses-6.4-h6a678d5_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/openssl-3.0.15-h5eee18b_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/xz-5.4.6-h5eee18b_1.conda
+https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.13-h5eee18b_1.conda
+https://repo.anaconda.com/pkgs/main/linux-64/intel-openmp-2022.1.0-h9e868ea_3769.conda
+https://repo.anaconda.com/pkgs/main/linux-64/libprotobuf-4.25.3-he621ea3_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/readline-8.2-h5eee18b_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/tk-8.6.14-h39e8969_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/mkl-2020.2-256.conda
+https://repo.anaconda.com/pkgs/main/linux-64/sqlite-3.45.3-h5eee18b_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/blas-1.0-mkl.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/python-3.8.20-he870216_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/python_abi-3.8-2_cp38.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/pytz-2024.1-py38h06a4308_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/setuptools-75.1.0-py38h06a4308_0.conda
+https://repo.anaconda.com/pkgs/main/noarch/six-1.16.0-pyhd3eb1b0_1.conda
+https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.12.2-pyha770c72_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/wheel-0.44.0-py38h06a4308_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/mkl-service-2.3.0-py38he904b0f_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/pip-24.2-py38h06a4308_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/python-dateutil-2.9.0post0-py38h06a4308_2.conda
+https://conda.anaconda.org/pytorch/linux-64/pytorch-1.12.1-py3.8_cuda11.6_cudnn8.3.2_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/biopython-1.79-py38h497a2fe_1.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/bottleneck-1.3.5-py38h7deecbd_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/mkl_fft-1.3.0-py38h54f3939_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/mkl_random-1.1.1-py38h0573a6f_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/numpy-1.19.2-py38h54aff64_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/numexpr-2.7.3-py38hb2eb853_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/scipy-1.6.2-py38h91f5cce_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/tensorboardx-2.6.2.2-py38h06a4308_0.conda
+https://repo.anaconda.com/pkgs/main/linux-64/pandas-1.4.4-py38h6a678d5_0.conda
