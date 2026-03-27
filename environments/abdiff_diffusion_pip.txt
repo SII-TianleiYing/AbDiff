@@ -1,0 +1,53 @@
+abfold @ git+https://github.com/SII-TianleiYing/AbFold-Extended.git@b9074b24817f6051fd56acdd85adc311023ef87b
+absl-py==2.1.0
+accelerate==1.0.1
+biopython @ file:///home/conda/feedstock_root/build_artifacts/biopython_1636053340935/work
+Bottleneck @ file:///opt/conda/conda-bld/bottleneck_1657175564434/work
+cachetools==5.5.0
+certifi==2024.8.30
+charset-normalizer==3.4.0
+diffusers==0.31.0
+filelock==3.16.1
+fsspec==2024.10.0
+google-auth==2.37.0
+google-auth-oauthlib==1.0.0
+grpcio==1.68.1
+huggingface-hub==0.26.5
+idna==3.10
+importlib_metadata==8.5.0
+Markdown==3.7
+MarkupSafe==2.1.5
+mkl-fft==1.3.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+numexpr @ file:///tmp/build/80754af9/numexpr_1614798506606/work
+numpy==1.24.4
+oauthlib==3.2.2
+packaging==24.2
+pandas==1.4.4
+pillow==10.4.0
+protobuf==5.29.1
+psutil==6.1.0
+pyasn1==0.6.1
+pyasn1_modules==0.4.1
+python-dateutil @ file:///croot/python-dateutil_1716495738603/work
+pytz @ file:///croot/pytz_1713974312559/work
+PyYAML==6.0.2
+regex==2024.11.6
+requests==2.32.3
+requests-oauthlib==2.0.0
+rsa==4.9
+safetensors==0.4.5
+scipy @ file:///tmp/build/80754af9/scipy_1616703172749/work
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+tensorboard==2.14.0
+tensorboard-data-server==0.7.2
+tensorboardX @ file:///croot/tensorboardx_1722369114844/work
+tokenizers==0.20.3
+torch==1.12.1
+tqdm==4.67.1
+transformers==4.46.3
+typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1717802530399/work
+urllib3==2.2.3
+Werkzeug==3.0.6
+zipp==3.20.2
