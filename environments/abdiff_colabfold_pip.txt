@@ -1,3 +1,5 @@
+jaxlib @ https://storage.googleapis.com/jax-releases/nocuda/jaxlib-0.3.10-cp37-none-manylinux2014_x86_64.whl
+jax==0.3.13
 absl-py==0.13.0
 alphafold-colabfold==2.1.14
 appdirs==1.4.4
